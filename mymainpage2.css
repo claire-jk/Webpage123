@@ -1,0 +1,141 @@
+/*Global Style*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Tahoma, sans-serif;
+}
+
+/* 設定背景圖片 */
+html {
+    background: url('image/given-story.png') no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 半透明內容區塊 */
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-out; /* 動畫效果 */
+}
+
+/*Header*/
+.header {
+    padding-top: 20px;
+    color: #8ec6e8;
+    text-align: center;
+}
+
+.header-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 250%; /* 加大字體 */
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/*Content Style*/
+.content-area {
+    display: flex;
+    border-top: 3px solid #8ec6e8;
+    border-bottom: 3px solid #8ec6e8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Main-area Style*/
+.main-area {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.main-area p {
+    font-size: 1.25em;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/*Footer*/
+.footer {
+    text-align: center;
+    font-size: 85%;
+    color: #666;
+    padding: 20px 0;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/* 動畫：滑動進場效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 向下箭頭 */
+.scroll-down, .scroll-up {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  color: #8ec6e8;
+  text-decoration: none;
+  transition: opacity 0.5s;
+  z-index: 1000;
+}
+
+.scroll-down {
+  bottom: 20px;
+}
+
+.scroll-up {
+  top: 20px;
+}
+
+.scroll-down:hover {
+    color: #ffffff;
+}
+
+.scroll-up:hover {
+    color: #ffffff;
+}
+
+/*圖標指回第一頁*/
+.home-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.home-logo img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.home-logo img:hover {
+    transform: scale(1.1);
+}

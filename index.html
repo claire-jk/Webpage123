@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>My Web page</title>
+  <link rel="stylesheet" href="mymainpage1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mymainpage1.css">
+</head>
+<body>
+  <!-- 開場動畫 -->
+  <div class="intro" id="intro">
+    <p>忘れないよ</p>
+    <p>いいえ、絶対に忘れてしまいます</p>
+  </div>
+
+  <!-- 主頁面 -->
+  <div class="container" id="main-content">
+    <header class="header">
+      <h1 class="header-title">Given被贈與的未來</h1>
+      <h2 class="header-subtitle">ギヴン</h2>
+    </header>
+  </div>
+
+  <!-- 往下箭頭按鈕 -->
+  <a href="mymainpage2.html" class="scroll-down" id="scroll-button">&#x25BC;</a>
+
+  <script>
+    // 6秒後執行淡出 intro、淡入主頁面
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const intro = document.getElementById('intro');
+        intro.classList.add('fade-out');
+
+        setTimeout(() => {
+          intro.style.display = 'none';
+          document.getElementById('main-content').classList.add('show');
+          document.getElementById('scroll-button').classList.add('show');
+          document.body.style.overflow = 'auto';
+        }, 1000); // 淡出動畫 1s 結束後顯示主頁
+      }, 6000);
+    });
+  </script>
+</body>
+</html>
